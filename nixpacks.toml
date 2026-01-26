@@ -1,0 +1,11 @@
+# Nixpacks Configuration for EasyPanel
+# Next.js 16 requires Node.js >= 20.9.0
+
+[phases.setup]
+nixPkgs = ["nodejs_20", "npm"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"
