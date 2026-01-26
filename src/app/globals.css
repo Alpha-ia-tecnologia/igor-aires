@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #09090b; /* zinc-950 */
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3f3f46; 
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #52525b; 
+  }
+}
+
+/* Developer Credit Styles - Moved from Footer component to avoid hydration errors */
+.developer-credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.developer-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #a0a0a0; 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+  color: #E0C56E;
+}
+
+.developer-credit strong {
+  font-weight: 600;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.developer-credit a:hover strong {
+  color: #fff;
+}
+
+.developer-credit .cta-text {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  transition: max-width 0.5s ease-out, opacity 0.3s ease-in, margin-left 0.5s ease-out;
+}
+
+.developer-credit a:hover .cta-text {
+  max-width: 200px;
+  opacity: 1;
+  margin-left: 4px;
+}
+
+.developer-credit .whatsapp-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E0C56E;
+  z-index: 1;
+}
+
+.developer-credit .whatsapp-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #E0C56E;
+  border-radius: 50%;
+  z-index: -1;
+  animation: pulse-icon 2.5s ease-out infinite;
+}
+
+@keyframes pulse-icon {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.6;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Hide developer credit until mounted to avoid hydration mismatch */
+.developer-credit-hidden {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
