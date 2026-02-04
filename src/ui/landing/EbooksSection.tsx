@@ -34,6 +34,14 @@ const defaultEbooks: Ebook[] = [
         image: '/images/ebook-shape-definido.png',
         purchaseUrl: 'https://payfast.greenn.com.br/rdzgajr',
     },
+    {
+        id: '3',
+        title: 'Manual de Manipulados',
+        subtitle: 'Igor Aires',
+        description: 'Domine a arte da prescrição inteligente com este guia técnico completo sobre formulações magistrais.',
+        image: '/images/ebook-manual-manipulados.png',
+        purchaseUrl: 'https://payfast.greenn.com.br/28fxrvf',
+    },
 ];
 
 interface EbooksSectionProps {
