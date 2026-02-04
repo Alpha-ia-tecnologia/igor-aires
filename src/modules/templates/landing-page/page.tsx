@@ -16,6 +16,7 @@ import { FAQSection } from '@/ui/landing/FAQSection';
 import { ContactSection } from '@/ui/landing/ContactSection';
 import { LandingFooter } from '@/ui/landing/LandingFooter';
 import { FloatingWhatsApp } from '@/ui/landing/FloatingWhatsApp';
+import { EbooksSection } from '@/ui/landing/EbooksSection';
 
 interface LandingPageTemplateProps {
     client: ClientConfig;
@@ -167,6 +168,9 @@ export default function LandingPageTemplate({ client }: LandingPageTemplateProps
 
             {/* Testimonials Section */}
             <TestimonialsSection />
+
+            {/* Ebooks Section */}
+            <EbooksSection />
 
             {/* WEBFIT Section */}
             <WebfitSection />
