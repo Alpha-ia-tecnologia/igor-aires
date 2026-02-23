@@ -42,6 +42,15 @@ const defaultEbooks: Ebook[] = [
         image: '/images/ebook-manual-manipulados.png',
         purchaseUrl: 'https://payfast.greenn.com.br/28fxrvf',
     },
+    {
+        id: '4',
+        title: 'Potencialize Sua Caneta',
+        subtitle: 'Igor Aires',
+        description: 'Guia nutricional completo para uso inteligente de canetas como Mounjaro (tirzepatida), com estratégia e consistência.',
+        image: '/images/ebook-potencialize-caneta.png',
+        purchaseUrl: 'https://payfast.greenn.com.br/zwe4rcm',
+        badge: 'Edição Premium',
+    },
 ];
 
 interface EbooksSectionProps {
@@ -106,7 +115,7 @@ export function EbooksSection({ ebooks = defaultEbooks }: EbooksSectionProps) {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center"
                 >
                     {ebooks.map((ebook) => (
                         <motion.a
