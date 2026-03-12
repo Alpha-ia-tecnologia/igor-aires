@@ -157,6 +157,9 @@ export default function LandingPageTemplate({ client }: LandingPageTemplateProps
                 appointmentUrl="#servicos"
             />
 
+            {/* Ebooks Section */}
+            <EbooksSection />
+
             {/* Services Section */}
             <ServicesSection ctaUrl="#resultados" />
 
@@ -168,9 +171,6 @@ export default function LandingPageTemplate({ client }: LandingPageTemplateProps
 
             {/* Testimonials Section */}
             <TestimonialsSection />
-
-            {/* Ebooks Section */}
-            <EbooksSection />
 
             {/* WEBFIT Section */}
             <WebfitSection />
