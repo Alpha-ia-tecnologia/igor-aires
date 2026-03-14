@@ -150,15 +150,15 @@ export default function LandingPageTemplate({ client }: LandingPageTemplateProps
             {/* Theme Toggle */}
             {mounted && <ThemeToggle isDark={isDark} toggleTheme={toggle} />}
 
+            {/* Ebooks Section */}
+            <EbooksSection />
+
             {/* Hero Section */}
             <HeroSection
                 profile={profile}
                 whatsappUrl={whatsappUrl}
                 appointmentUrl="#servicos"
             />
-
-            {/* Ebooks Section */}
-            <EbooksSection />
 
             {/* Services Section */}
             <ServicesSection ctaUrl="#resultados" />
